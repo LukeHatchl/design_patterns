@@ -25,7 +25,7 @@ public abstract class MoveBehavior {
     public void move(ArrayList<String> character, int speed) {
         for(int i = 0;i < NUM_MOVES; i++) {
             displayCharacter(character);
-            sleep(1000);
+            sleep(DEFAULT_SPEED/speed);
             pushCharacterForward(character);
             clear();
         }
