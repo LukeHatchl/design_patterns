@@ -1,7 +1,13 @@
 package observer;
 
+/**
+ * The Crying Baby Program
+ */
 public class CribDriver {
 
+	/**
+	 * Runs the program
+	 */
 	public void run() {
 		Baby baby = new Baby("Charlie");
 		Observer dad = new Dad(baby);
