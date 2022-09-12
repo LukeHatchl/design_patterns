@@ -32,7 +32,6 @@ public abstract class TreeDecorator extends Tree {
                 }
             }
             lines.set(i, myString.toString());
-            System.out.println(i);
         }
     }
 }
