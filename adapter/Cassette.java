@@ -6,10 +6,18 @@ public class Cassette implements AnalogAlbum {
     private ArrayList<String> songs;
     private int currentIndex;
 
+    /*
+     * assigns this instance of songs to the general variable songs
+     * @param songs arraylist containing songs on cassette
+     */
     public Cassette(ArrayList<String> songs) {
         this.songs = songs;
     }
     
+    /*
+     * plays the songs on the cassette in order
+     * returns test ssaying at the end if cassette is at the end
+     */
     public String play(){
         currentIndex++;
         if(currentIndex == songs.size()+1) {
@@ -20,6 +28,10 @@ public class Cassette implements AnalogAlbum {
         }
     }
 
+    /*
+     * rewinds the cassette by one song
+     * returns text saying fully rewound if back to the beginning
+     */
     public String rewind() {
         if(currentIndex == 0) {
             return "Fully Re-wound";
@@ -30,6 +42,9 @@ public class Cassette implements AnalogAlbum {
         }
     }
 
+    /*
+     * fast forwards cassette, skipping a song
+     */
     public String ffwd() {
         currentIndex += 1;
         if(currentIndex == songs.size()) {
@@ -43,10 +58,16 @@ public class Cassette implements AnalogAlbum {
         }
     }
 
+    /*
+     * returns text saying cassette is pausing
+     */
     public String pause() {
         return "Pausing";
     }
 
+    /*
+     * returns text saying cassette is stopping
+     */
     public String stopEject() {
         return "Stopping cassette and ejecting";
     }
